@@ -1,7 +1,7 @@
 
 pipeline {
     environment {
-    PROJECT = "pro1-265115"
+    PROJECT = "sequislife-pilot"
     APP_NAME = "sample-java"
     FE_SVC_NAME = "${APP_NAME}"
     CLUSTER = "jenkins"
@@ -25,13 +25,13 @@ spec:
   
   containers:
   - name: maven
-    image: us.gcr.io/pro1-265115/maven
+    image: us.gcr.io/sequislife-pilot/maven
     command:
     - cat
     tty: true
 
   - name: helm
-    image: us.gcr.io/pro1-265115/helm3
+    image: us.gcr.io/sequislife-pilot/helm3
     command:
     - cat
     tty: true
