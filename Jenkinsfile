@@ -11,10 +11,7 @@ pipeline {
   }
 
   agent {
-   tools {
-    maven 'M3'
-  }
-    kubernetes {
+   kubernetes {
       label 'maven'
       defaultContainer 'jnlp'
       yaml """
@@ -40,6 +37,9 @@ spec:
     tty: true
 """
 }
+  }
+    tools {
+    maven 'M3'
   }
     stages {
         stage('Build') {
