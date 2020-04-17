@@ -11,6 +11,9 @@ pipeline {
   }
 
   agent {
+   tools {
+    maven 'M3'
+  }
     kubernetes {
       label 'maven'
       defaultContainer 'jnlp'
