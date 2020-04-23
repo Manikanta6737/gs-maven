@@ -46,14 +46,6 @@ spec:
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
+          }
         }
-     	stage('Build and push image with Container Builder') {
-      	    steps {
-              container('gcloud') {
-          	sh "cp $workspace/target/gs-maven-0.1.0.jar ./gs-maven-0.1.0.jar"
-          	sh "PYTHONUNBUFFERED=1 gcloud builds submit -t ${IMAGE_TAG} ."
-         }
-       }
-     }
-   }
- } 
+      } 
