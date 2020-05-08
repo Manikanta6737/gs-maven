@@ -50,7 +50,7 @@ spec:
      stage('Test') { 
             steps {
                 sh 'mvn test'
-		sh 'mvn -s ../configuration/settings.xml -B clean test' 
+		sh 'mvn -s settings.xml -B clean test' 
             }
             post {
                 always {
