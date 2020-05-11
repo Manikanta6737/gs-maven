@@ -59,8 +59,8 @@ spec:
                     remote.password = '416961434'
                     remote.allowAnyHosts = true
 
-                    sshRemove : remote, command: "source ~/.bash_profile; cd /home/manikanta_sura_fisclouds_com/sample/sam"
-                }
+                    sshRemove remote: remote, path: "/home/manikanta_sura_fisclouds_com/sample/sam"
+                }	
             }
         }
        }
