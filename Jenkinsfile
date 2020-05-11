@@ -4,7 +4,7 @@ pipeline {
     PROJECT = "sequislife-pilot"
     APP_NAME = "sample-java"
     FE_SVC_NAME = "${APP_NAME}"
-    CLUSTER = "jenkins"
+    CLUSTER = "jenkins-cicd"
     CLUSTER_ZONE = "us-central1-c"
     IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:latest"
     JENKINS_CRED = "${PROJECT}"
@@ -55,11 +55,11 @@ spec:
                     def remote = [:]
                     remote.name = 'infra-as-code'
                     remote.host = '35.223.38.22'
-                    remote.user = 'ravindra_varigalla_fisclouds_com'
-                    remote.password = '323380056'
+                    remote.user = 'manikanta_sura_fisclouds_com'
+                    remote.password = '416961434'
                     remote.allowAnyHosts = true
 
-                    sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/ravindra_varigalla_fisclouds_com; ./bin/sidekiq_start.sh"
+                    sshRemove : remote, command: "source ~/.bash_profile; cd /home/manikanta_sura_fisclouds_com/sample/sam"
                 }
             }
         }
