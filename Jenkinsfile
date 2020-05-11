@@ -56,7 +56,7 @@ spec:
                     remote.user = 'manikanta_sura_fisclouds_com'
                     remote.password = ''
                     remote.allowAnyHosts = true
-			sshCommand remote: remote, command: "ls"
+			sshCommand remote: remote, command: "sudo ls"
 		
 
                     
