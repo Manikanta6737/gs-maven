@@ -58,7 +58,7 @@ spec:
                     remote.user = 'ravindra_varigalla_fisclouds_com'
                     remote.password = '323380056'
                     remote.allowAnyHosts = true
-			sshCommand remote: remote, command: "cd /home/ravindra_varigalla_fisclouds_com; ./bin/test.sh"
+			sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/ravindra_varigalla_fisclouds_com; ./bin/test.sh"
 		}
             }
         }
