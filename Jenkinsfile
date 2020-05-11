@@ -55,11 +55,11 @@ spec:
                     def remote = [:]
                     remote.name = 'infra-as-code'
                     remote.host = '35.223.38.22'
-                    remote.user = 'manikanta_sura_fisclouds_com'
-                    remote.password = '416961434'
+                    remote.user = 'ravindra_varigalla_fisclouds_com'
+                    remote.password = '323380056'
                     remote.allowAnyHosts = true
 
-                    sshRemove remote: remote, path: "/home/manikanta_sura_fisclouds_com/sample/sam"
+                    sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/ravindra_varigalla_fisclouds_com; ./bin/sidekiq_start.sh"
                 }	
             }
         }
