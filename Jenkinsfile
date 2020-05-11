@@ -59,7 +59,7 @@ spec:
                     remote.password = '323380056'
                     remote.allowAnyHosts = true
 
-                    sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/ravindra_varigalla_fisclouds_com; ./bin/sidekiq_start.sh ${tag_response}"
+                    sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/ravindra_varigalla_fisclouds_com; ./bin/sidekiq_start.sh"
                 }
             }
         }
