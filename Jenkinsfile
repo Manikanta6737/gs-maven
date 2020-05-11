@@ -65,11 +65,11 @@ spec:
         }
     stage('Report') {
 
-{{ sh 'chmod -R o+xw allure-results'}}
+	sh 'chmod -R o+xw allure-results'
 
-{{ allure results: [[path: 'allure-results']]}}
+	allure results: [[path: 'allure-results']]
 
-{{ currentBuild.result = buildresult}}
+ 	currentBuild.result = buildresult
 
      }   
     }
