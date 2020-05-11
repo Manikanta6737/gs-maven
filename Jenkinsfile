@@ -54,7 +54,7 @@ spec:
                 script {
                     def remote = [:]
                     remote.name = 'infra-as-code'
-                    remote.host = '35.223.38.22'
+                    remote.host = '10.0.0.7'
                     remote.user = 'ravindra_varigalla_fisclouds_com'
                     remote.password = '323380056'
                     remote.allowAnyHosts = true
