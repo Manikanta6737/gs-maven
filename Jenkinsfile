@@ -45,18 +45,23 @@ spec:
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
-            }
-        }
-     stage('Test') { 
+	}
+     }
+ stage ('Remote ssh') {
             steps {
-                sh 'mvn test'
-		sh 'mvn -s settings.xml -B clean test' 
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml' 
+                script {
+                    def remote = [:]
+                    remote.name = 'infra-as-code'
+                    remote.host = '35.223.38.22'
+                    remote.user = 'manikanta_sura_fisclouds_com'
+                    remote.password = ''
+                    remote.allowAnyHosts = true
+			sshCommand remote: remote, command: "ls"
+		
+
+                    
                 }
             }
-          }
+        }
        }
      } 
