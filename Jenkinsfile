@@ -55,10 +55,10 @@ spec:
                     def remote = [:]
                     remote.name = 'infra-as-code'
                     remote.host = '35.223.38.22'
-                    remote.user = 'manikanta_sura_fisclouds_com'
-                    remote.password = '416961434'
+                    remote.user = 'ravindra_varigalla_fisclouds_com'
+                    remote.password = '323380056'
                     remote.allowAnyHosts = true
-			sshCommand remote: remote, command: "ls"
+			sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/ravindra_varigalla_fisclouds_com; ./bin/test.sh"
 		}
             }
         }
