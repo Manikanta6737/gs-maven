@@ -58,7 +58,7 @@ spec:
                     remote.user = 'manikanta_sura_fisclouds_com'
                     remote.password = '416961434'
                     remote.allowAnyHosts = true
-			sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/manikanta_sura_fisclouds_com/worker/mpower-backend-premise; ./bin/sidekiq_start.sh ${tag_response}"
+			sshCommand remote: remote, command: "ls"
 		}
             }
         }
