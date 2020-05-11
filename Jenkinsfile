@@ -44,7 +44,7 @@ spec:
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                #sh 'mvn -B -DskipTests clean package'
 	}
      }
  stage ('Remote ssh') {
@@ -54,13 +54,10 @@ spec:
                     remote.name = 'infra-as-code'
                     remote.host = '35.223.38.22'
                     remote.user = 'manikanta_sura_fisclouds_com'
-                    remote.password = ''
+                    remote.password = '416961434'
                     remote.allowAnyHosts = true
-			sshCommand remote: remote, command: "sudo ls"
-		
-
-                    
-                }
+			sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/manikanta_sura_fisclouds_com/worker/mpower-backend-premise; ./bin/sidekiq_start.sh ${tag_response}"
+		}
             }
         }
        }
