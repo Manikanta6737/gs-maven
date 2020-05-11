@@ -49,17 +49,18 @@ spec:
 		   """
 	}
     }
- stage ('Remote ssh') {
+  stage ('Deploy Web') {
             steps {
                 script {
                     def remote = [:]
-                    remote.name = 'infra-as-code'
-                    remote.host = '35.223.38.22'
-                    remote.user = 'ravindra_varigalla_fisclouds_com'
-                    remote.password = '323380056'
+                    remote.name = 'Staging Gateway'
+                    remote.host = '172.16.250.80'
+                    remote.user = 'inovlab'
+                    remote.password = 'Abcd1234!'
                     remote.allowAnyHosts = true
-			sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/ravindra_varigalla_fisclouds_com;./bin/date"
-		}
+
+                    sshCommand remote: remote, command: "source ~/.bash_profile; cd /home/inovlab/web/mpower-backend-premise; ./bin/web_start.sh ${tag_response}"
+                }
             }
         }
        }
