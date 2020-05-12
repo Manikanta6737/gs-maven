@@ -55,10 +55,11 @@ spec:
                     remote.name = 'infra-as-code'
                     remote.host = '10.0.0.7'
                     remote.user = 'jenkns'
-                    remote.password = '$6$4Tm5Ebgl$1zffJZdXtC4uOAexNWR6CjWSjiNiRZqLSBm7yu6.gm0IvuULUQuUMjEAD9qa2VprIcxT1BfCfT.vKkgqUO98A1'
+                    remote.password = ''
                     remote.allowAnyHosts = true
 
-                    sshCommand remote: remote, command: "source ~/.bash_profile; cd /root/sequis-life/source/mpower-backend-premise/bin; ./bin/sidekiq_start.sh"
+                    sshCommand remote: remote, command: "ls"
+		
                 }	
             }
     	}
