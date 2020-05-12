@@ -58,7 +58,7 @@ spec:
                     remote.password = ''
                     remote.allowAnyHosts = true
 
-                    sshCommand remote: remote, command: "ls"
+                    sshCommand remote: remote, command: "mkdir /home/jenkns/docs"
 		
                 }	
             }
