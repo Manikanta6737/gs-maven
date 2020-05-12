@@ -55,7 +55,7 @@ spec:
                     remote.name = 'infra-as-code'
                     remote.host = '10.0.0.7'
                     remote.user = 'jenkns'
-                    remote.password = ''
+                    remote.password = 'jenkins'
                     remote.allowAnyHosts = true
 
                     sshCommand remote: remote, command: "mkdir /home/jenkns/docs"
