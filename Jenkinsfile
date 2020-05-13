@@ -58,7 +58,7 @@ spec:
                     remote.password = 'jenkins'
                     remote.allowAnyHosts = true
 
-                    sshCommand remote: remote, command: "cd /home/jenkns/docs; ./sample.sh"
+                    sshCommand remote: remote, command: "cd /home/jenkns/docs; ./arg.sh"
 		
                 }	
             }
