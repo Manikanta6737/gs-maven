@@ -29,7 +29,6 @@ spec:
     command:
     - cat
     tty: true
-
   - name: helm
     image: us.gcr.io/sequislife-pilot/helm3
     command:
@@ -55,13 +54,14 @@ spec:
                     def remote = [:]
                     remote.name = 'infra-as-code'
                     remote.host = '35.223.38.22'
-                    remote.user = 'root'
-                    remote.password = '$6$4Tm5Ebgl$1zffJZdXtC4uOAexNWR6CjWSjiNiRZqLSBm7yu6.gm0IvuULUQuUMjEAD9qa2VprIcxT1BfCfT.vKkgqUO98A1'
+                    remote.user = 'jenkns'
+                    remote.password = 'jenkins'
                     remote.allowAnyHosts = true
 
-                    sshCommand remote: remote, command: "source ~/.bash_profile; cd /root/sequis-life/source/mpower-backend-premise/bin; ./bin/sidekiq_start.sh"
+                    sshCommand remote: remote, command: "mkdir /home/jenkns/doc"
+		
                 }	
             }
-  	}
+    	}
     }
    } 
