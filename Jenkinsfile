@@ -53,7 +53,7 @@ spec:
                 script {
                     def remote = [:]
                     remote.name = 'infra-as-code'
-                    remote.host = '10.0.0.7'
+                    remote.host = '35.223.38.22'
                     remote.user = 'jenkns'
                     remote.password = 'jenkins'
                     remote.allowAnyHosts = true
